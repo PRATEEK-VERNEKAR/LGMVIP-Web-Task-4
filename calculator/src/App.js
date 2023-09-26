@@ -65,7 +65,7 @@ function App() {
           <button onClick={()=>{handleNumber(".")}} class="decimal" disabled={decimalAllow}>.</button>
           <button onClick={()=>{handleNumber("0")}} class="numbers">0</button>
           <button onClick={()=>{handleNumber("/")}} class="operators" disabled={operatorOnNot || mulDevAllow}>/</button>
-          <button onClick={()=>{handleEquate()}} class="equal">=</button>
+          <button onClick={()=>{handleEquate()}} class="equal" disabled={operatorOnNot}>=</button>
         </div>
       </div>
     </div>
