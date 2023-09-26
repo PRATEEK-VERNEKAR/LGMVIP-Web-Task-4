@@ -1,0 +1,52 @@
+*{
+  padding:0;
+  margin:0;
+}
+
+
+#root{
+  height: 100vh;
+}
+
+.App{
+  background: linear-gradient(red,blue);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+}
+
+.Region{
+  width: 50%;
+  height: 70%;
+  border: 2px solid gray;
+  display: grid;
+  grid-template-rows: 1fr 4fr
+}
+
+.inputs{
+  display: grid;
+  grid-template-rows: 1fr 1fr 1fr 1fr;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+}
+
+button{
+  font-size: 2rem;
+}
+
+.output-panel{
+  display: grid;
+  /* grid-template-rows: 1fr; */
+  grid-template-columns: 3fr 1fr;
+}
+
+#output-field{
+  /* width: 100%;
+  height: 100%; */
+  border:0;
+  text-align: right;
+  font-size: 2rem;
+  padding-right:3px;
+  overflow-x:scroll;
+}
+
