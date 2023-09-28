@@ -9,7 +9,7 @@
 }
 
 .App{
-  background: linear-gradient(red,blue);
+  background: linear-gradient(rgb(186, 86, 39),rgb(101, 133, 93));
   display: flex;
   justify-content: center;
   align-items: center;
@@ -17,16 +17,18 @@
 }
 
 .Region{
-  width: 50%;
+  width: 30%;
   height: 70%;
-  border: 2px solid gray;
   display: grid;
-  grid-template-rows: 1fr 4fr
+  grid-template-rows: 1fr 4fr;
+  border-radius: 20px;
+  overflow: hidden;
+
 }
 
 .inputs{
   display: grid;
-  grid-template-rows: 1fr 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
   grid-template-columns: 1fr 1fr 1fr 1fr;
 }
 
@@ -34,19 +36,29 @@ button{
   font-size: 2rem;
 }
 
-.output-panel{
-  display: grid;
-  /* grid-template-rows: 1fr; */
-  grid-template-columns: 3fr 1fr;
-}
 
 #output-field{
-  /* width: 100%;
-  height: 100%; */
-  border:0;
+  border:4px solid black;
+  border-radius: 30px;
   text-align: right;
   font-size: 2rem;
   padding-right:3px;
   overflow-x:scroll;
 }
 
+.close:hover{
+  background-color: rgb(255, 0, 0);
+}
+
+.equal:hover{
+  background-color: greenyellow;
+}
+
+button{
+  border:4px solid black;
+  border-radius: 1.2rem;
+}
+
+button:hover{
+  background-color: beige;
+}
