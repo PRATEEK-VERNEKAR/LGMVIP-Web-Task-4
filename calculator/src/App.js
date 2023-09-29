@@ -1,5 +1,5 @@
 import './App.css';
-import {useState} from 'react';
+import {useState,useEffect} from 'react';
 import {evaluate} from 'mathjs';
 
 function App() {
@@ -38,14 +38,24 @@ function App() {
     setDisplay(tempString);
   }
 
+  const focusInputRight = () => {
+    const inputField = document.getElementById('output-field');
+    inputField.scrollLeft = inputField.scrollWidth;
+  };
+
+  useEffect(() => {
+    // Whenever the content of the input field changes, call the focusInputRight function
+    focusInputRight();
+  }, [display]);
+
   return (
     <div className="App">
       <div className="Region">
         <input id='output-field' readOnly value={display} placeholder='0'></input>
         <div className='inputs'>
-          <button onClick={()=>{handleBackSpace()}} className="equal ">&lt;</button>
-          <div></div>
-          <div></div>
+          <button onClick={()=>{handleBackSpace()}}>&lt;</button>
+          <button onClick={()=>{handleNumber("(")}} className='operators'>(</button>
+          <button onClick={()=>{handleNumber(")")}} className='operators'>)</button>
           <button onClick={()=>{setDisplay("")}} className='close'>C</button>
           <button onClick={()=>{handleNumber("1")}} className="numbers">1</button>
           <button onClick={()=>{handleNumber("2")}} className="numbers">2</button>

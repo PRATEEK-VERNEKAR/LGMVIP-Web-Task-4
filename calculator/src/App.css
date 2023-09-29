@@ -9,7 +9,7 @@
 }
 
 .App{
-  background: linear-gradient(rgb(186, 86, 39),rgb(101, 133, 93));
+  background: black;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -17,7 +17,7 @@
 }
 
 .Region{
-  width: 30%;
+  width: 90%;
   height: 70%;
   display: grid;
   grid-template-rows: 1fr 4fr;
@@ -34,16 +34,22 @@
 
 button{
   font-size: 2rem;
+  background:radial-gradient(rgb(197, 202, 110),rgb(12, 224, 47));
 }
 
 
 #output-field{
-  border:4px solid black;
-  border-radius: 30px;
+  outline:0;
+  border:4px solid red;
+  border-radius: 36px;
   text-align: right;
   font-size: 2rem;
   padding-right:3px;
-  overflow-x:scroll;
+  overflow-x:auto;
+  padding-right: 20px;
+  background-color: yellow;
+  margin-bottom: 20px;
+  /* background:radial-gradient(rgb(241, 184, 11),rgb(195, 206, 110)); */
 }
 
 .close:hover{
@@ -55,10 +61,35 @@ button{
 }
 
 button{
-  border:4px solid black;
+  border:4px solid red;
   border-radius: 1.2rem;
 }
 
 button:hover{
   background-color: beige;
+}
+
+
+@media screen and (min-width: 480px) {
+  .Region {
+    width: 70%;
+  }
+}
+
+@media screen and (min-width: 700px) {
+  .Region {
+    width: 50%;
+  }
+}
+
+@media screen and (min-width: 800px) {
+  .Region {
+    width: 42%;
+  }
+}
+
+@media screen and (min-width: 1000px) {
+  .Region {
+    width: 35%;
+  }
 }
