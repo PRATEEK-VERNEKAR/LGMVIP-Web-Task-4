@@ -53,7 +53,7 @@ function App() {
       <div className="Region">
         <input id='output-field' readOnly value={display} placeholder='0'></input>
         <div className='inputs'>
-          <button onClick={()=>{handleBackSpace()}}>&lt;</button>
+          <button onClick={()=>{handleBackSpace()}}><img src='Backspace.png' width={'20px'} height={'20px'} alt='<'></img></button>
           <button onClick={()=>{handleNumber("(")}} className='operators'>(</button>
           <button onClick={()=>{handleNumber(")")}} className='operators'>)</button>
           <button onClick={()=>{setDisplay("")}} className='close'>C</button>
